@@ -1,4 +1,5 @@
 var body = document.getElementsByTagName("body")[0];
+var error = document.getElementById("error");
 
 
 function decrease(){
@@ -6,16 +7,10 @@ function decrease(){
     var numberPresent = Number(numberElement.innerText);
 
     if(numberPresent==0){
-
-        var error = document.createElement("div");
-        error.innerText = "ERROR! Cannot go below 0";
-        error.style.color = "red";
-        var btn = document.getElementById("buttons")
-        body.insertBefore(error,body.children[3]);
-
-        
+       error.style.color= "red";  
     }
     else{
+        error.style.color= "black";  
         numberElement.innerText = numberPresent-1;
     }
 }
@@ -23,14 +18,15 @@ function decrease(){
 function increase(){
     var numberElement = document.getElementById("num");
     var numberPresent = Number(numberElement.innerText);
-   
+    error.style.color= "black"; 
     numberElement.innerText = numberPresent+1;
     
 }
 
 function clearNumber(){
     var numberElement = document.getElementById("num");
-       
+
+    error.style.color= "black";    
     numberElement.innerText = 0;
     
 }

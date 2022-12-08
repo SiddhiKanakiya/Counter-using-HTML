@@ -5,6 +5,10 @@
 
 }
 
+#error{
+    color: black;
+}
+
 h1{
     margin-left: 2%;
     margin-top: 2%;
